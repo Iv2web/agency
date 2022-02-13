@@ -1,9 +1,9 @@
 //<Connecting fonts>=================================================================
-// insert the google fonts URL here
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 //<Connecting fonts>=================================================================
 
 //<Defoult font>=================================================================
-$fontfamily: "";
+$fontfamily: "Rubik";
 //<Defoult font>=================================================================
 
 //<Variables>=================================================================
@@ -23,7 +23,7 @@ $minwidth: 320px;
 
 //<MAIN GRID>=================================================================
 .container {
-  max-width: 1130px;
+  max-width: 1170px;
   padding: 0px 15px;
   margin: 0px auto;
 }
@@ -35,10 +35,64 @@ $minwidth: 320px;
 @import "_variables";
 //<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
 
-//< START MAIN BLOCK >=================================================================
-
-//< END MAIN BLOCK >=================================================================
 //< START HEADER >=================================================================
+.wrapper {
+  background-color: $krayola;
+}
+.header {
+  margin: 20px 0px 0px 0px;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__burger {
+  }
+
+  &__menu {
+  }
+
+  &__list {
+    display: flex;
+    li {
+      margin: 0px 0px 0px 34px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $sapphire;
+    font-weight: 500;
+  }
+  &__line {
+    padding: 0px 3px 3px 3px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      padding: 0px 3px 3px 3px;
+      border-bottom: 3px solid #cddf6b;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__switch {
+  }
+}
+
+.btn {
+  padding: 13.5px 20px;
+  border: 2px solid #cddf6b;
+  border-radius: 35px;
+}
+.switch {
+  &__ru {
+  }
+}
 
 //< END HEADER >=================================================================
 //< START CONTENT >=================================================================

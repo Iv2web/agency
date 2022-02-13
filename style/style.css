@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 /*Обнуление*/
 * {
   padding: 0;
@@ -40,7 +41,7 @@ body {
 body {
   line-height: 1;
   font-size: 14px;
-  font-family: "";
+  font-family: "Rubik";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -49,7 +50,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "Rubik";
 }
 
 input::-ms-clear {
@@ -99,7 +100,7 @@ h6 {
 }
 
 .container {
-  max-width: 1130px;
+  max-width: 1170px;
   padding: 0px 15px;
   margin: 0px auto;
 }
@@ -126,6 +127,62 @@ h6 {
   left: 0;
   opacity: 0;
   visibility: hidden;
+}
+
+.wrapper {
+  background-color: #3d85f9;
+}
+
+.header {
+  margin: 20px 0px 0px 0px;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list li {
+  margin: 0px 0px 0px 34px;
+}
+
+.header__link {
+  font-size: 14px;
+  color: #07275c;
+  font-weight: 500;
+}
+
+.header__line {
+  padding: 0px 3px 3px 3px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__line:hover {
+  padding: 0px 3px 3px 3px;
+  border-bottom: 3px solid #cddf6b;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn {
+  padding: 13.5px 20px;
+  border: 2px solid #cddf6b;
+  border-radius: 35px;
 }
 
 /* 
