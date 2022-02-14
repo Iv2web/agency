@@ -63,9 +63,6 @@ $minwidth: 320px;
       position: relative;
     }
   }
-  &__left {
-    display: flex;
-  }
 
   &__link {
     font-size: 14px;
@@ -79,7 +76,7 @@ $minwidth: 320px;
 
     &:hover {
       padding: 0px 3px 3px 3px;
-      border-bottom: 3px solid #cddf6b;
+      border-bottom: 3px solid yellow;
       transition: all 0.3s ease 0s;
     }
   }
@@ -95,7 +92,7 @@ $minwidth: 320px;
   &__btn {
     width: 130px;
     padding: 13.5px 20px;
-    border: 2px solid #cddf6b;
+    border: 2px solid yellow;
     border-radius: 35px;
     margin: 0px 26px 0px 0px;
   }
@@ -121,6 +118,86 @@ $minwidth: 320px;
     }
     &__list li {
       margin: 0px 0px 0px 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0px;
+      background-color: $krayola;
+      z-index: 2;
+      padding: 54px 0px 0px 0px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__logo {
+      visibility: hidden;
+    }
+    &__burger {
+      position: absolute;
+      left: 85%;
+      width: 20px;
+      height: 14px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        left: 2px;
+        background-color: yellow;
+      }
+      &::before {
+        top: 0px;
+      }
+      &::after {
+        bottom: 0;
+      }
+      span {
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        left: 0x;
+        top: 6px;
+        background-color: yellow;
+      }
+    }
+
+    &__menu {
+    }
+
+    &__list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      li {
+        margin: 24px auto;
+      }
+    }
+    &__submenu {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+    &__btn {
+      width: 130px;
+      padding: 13.5px 20px;
+      border: 2px solid yellow;
+      border-radius: 35px;
+      margin: 0px auto 0px;
+    }
+    &__lang {
+      margin: 30px 0px 0px 0px;
+    }
+
+    &__lang span {
+      visibility: hidden;
     }
   }
 }

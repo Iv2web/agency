@@ -160,12 +160,6 @@ h6 {
   position: relative;
 }
 
-.header__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .header__link {
   font-size: 14px;
   color: #07275c;
@@ -181,7 +175,7 @@ h6 {
 
 .header__line:hover {
   padding: 0px 3px 3px 3px;
-  border-bottom: 3px solid #cddf6b;
+  border-bottom: 3px solid yellow;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -198,7 +192,7 @@ h6 {
 .header__btn {
   width: 130px;
   padding: 13.5px 20px;
-  border: 2px solid #cddf6b;
+  border: 2px solid yellow;
   border-radius: 35px;
   margin: 0px 26px 0px 0px;
 }
@@ -225,6 +219,95 @@ h6 {
   }
   .header__list li {
     margin: 0px 0px 0px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    background-color: #3d85f9;
+    z-index: 2;
+    padding: 54px 0px 0px 0px;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__logo {
+    visibility: hidden;
+  }
+  .header__burger {
+    position: absolute;
+    left: 85%;
+    width: 20px;
+    height: 14px;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    left: 2px;
+    background-color: yellow;
+  }
+  .header__burger::before {
+    top: 0px;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    left: 0x;
+    top: 6px;
+    background-color: yellow;
+  }
+  .header__list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__list li {
+    margin: 24px auto;
+  }
+  .header__submenu {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+  }
+  .header__btn {
+    width: 130px;
+    padding: 13.5px 20px;
+    border: 2px solid yellow;
+    border-radius: 35px;
+    margin: 0px auto 0px;
+  }
+  .header__lang {
+    margin: 30px 0px 0px 0px;
+  }
+  .header__lang span {
+    visibility: hidden;
   }
 }
 
