@@ -24,7 +24,7 @@ $minwidth: 320px;
 //<MAIN GRID>=================================================================
 .container {
   max-width: 1170px;
-  padding: 0px 15px;
+  padding: 0px 16px;
   margin: 0px auto;
 }
 //<MAIN GRID>=================================================================
@@ -40,7 +40,7 @@ $minwidth: 320px;
   background-color: $krayola;
 }
 .header {
-  margin: 20px 0px 0px 0px;
+  margin: 19px 0px 0px 0px;
   &__body {
     display: flex;
     justify-content: space-between;
@@ -59,8 +59,12 @@ $minwidth: 320px;
   &__list {
     display: flex;
     li {
-      margin: 0px 0px 0px 34px;
+      margin: 0px 0px 0px 35px;
+      position: relative;
     }
+  }
+  &__left {
+    display: flex;
   }
 
   &__link {
@@ -80,14 +84,60 @@ $minwidth: 320px;
     }
   }
 
-  &__switch {
+  &__bottom {
+  }
+
+  &__submenu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 130px;
+    padding: 13.5px 20px;
+    border: 2px solid #cddf6b;
+    border-radius: 35px;
+    margin: 0px 26px 0px 0px;
+  }
+
+  &__lang {
+    position: relative;
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: calc(50% - 9px);
+      left: -20px;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    &__menu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 100px;
+      left: 0;
+    }
+    &__list li {
+      margin: 0px 0px 0px 15px;
+    }
   }
 }
 
-.btn {
-  padding: 13.5px 20px;
-  border: 2px solid #cddf6b;
-  border-radius: 35px;
+.header {
+}
+
+.lang {
+  /*  &::before {
+    content: "";
+    display: block;
+    background-image: url(img/icons/icon_1.svg);
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 0px;
+  } */
 }
 .switch {
   &__ru {
