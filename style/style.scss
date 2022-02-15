@@ -34,26 +34,47 @@ $minwidth: 320px;
 @import "../scss/_mixin.scss";
 @import "_variables";
 //<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+//< ELEMENTS >=======================================================================
+.btn {
+  //width: 128px;
+  padding: 14.5px 27px;
+  font-size: 18px;
+  font-weight: 500;
+  //border: 2px solid yellow;
+  border-radius: 27px;
+  background-color: yellow;
+  color: $sapphire;
+}
+//< ELEMENTS >=======================================================================
 
 //< START HEADER >=================================================================
 .wrapper {
   background-color: $krayola;
 }
 .header {
-  margin: 19px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;
+  min-height: 44px;
   &__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
   &__logo {
+    margin: 0px 87px 0px 0px;
   }
 
   &__burger {
   }
 
   &__menu {
+    margin: 14px 0px 14px 0px;
   }
 
   &__list {
@@ -61,6 +82,9 @@ $minwidth: 320px;
     li {
       margin: 0px 0px 0px 35px;
       position: relative;
+      &:first-child {
+        margin: 0;
+      }
     }
   }
 
@@ -85,16 +109,18 @@ $minwidth: 320px;
   }
 
   &__submenu {
+    justify-content: flex-end;
     display: flex;
     align-items: center;
+    margin: 0px 0px 0px 35px;
   }
 
   &__btn {
-    width: 130px;
+    width: 128px;
     padding: 13.5px 20px;
     border: 2px solid yellow;
     border-radius: 35px;
-    margin: 0px 26px 0px 0px;
+    margin: 0px 60px 0px 0px;
   }
 
   &__lang {
@@ -108,19 +134,17 @@ $minwidth: 320px;
     }
   }
 
-  @media (max-width: 1120px) {
-    &__menu {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 100px;
-      left: 0;
+  @media (max-width: 1170px) {
+    &__left {
+      flex-wrap: wrap;
+      justify-content: start;
     }
-    &__list li {
-      margin: 0px 0px 0px 15px;
+
+    &__logo {
+      margin: 5px 100px 0px 0px;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 796px) {
     &__body {
       position: absolute;
       width: 100%;
@@ -134,9 +158,13 @@ $minwidth: 320px;
       display: flex;
       flex-direction: column;
     }
+    &__left {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
 
     &__logo {
-      visibility: hidden;
+      display: none;
     }
     &__burger {
       position: absolute;
@@ -177,12 +205,16 @@ $minwidth: 320px;
       flex-direction: column;
       li {
         margin: 24px auto;
+        &:first-child {
+          margin: 24px auto;
+        }
       }
     }
     &__submenu {
       position: relative;
       display: flex;
       flex-direction: column;
+      margin: 0px;
       z-index: 2;
     }
     &__btn {
@@ -201,28 +233,56 @@ $minwidth: 320px;
     }
   }
 }
-
-.header {
-}
-
-.lang {
-  /*  &::before {
-    content: "";
-    display: block;
-    background-image: url(img/icons/icon_1.svg);
-    width: 16px;
-    height: 16px;
-    top: 10px;
-    left: 0px;
-  } */
-}
 .switch {
   &__ru {
   }
 }
-
 //< END HEADER >=================================================================
 //< START CONTENT >=================================================================
+//--------------------------------------------------
+.begin {
+  &__block {
+    position: relative;
+    max-width: 100%;
+    margin: 100px 0px 0px 0px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+    img {
+    }
+    /* &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      background-image: url(img/images/img_1.jpg);
+      z-index: 2;
+    } */
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+
+  &__title {
+    margin: 6px 0px 86px 0px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 150%;
+    color: $sapphire;
+  }
+
+  &__btn {
+  }
+}
 
 //< END  CONTENT >=================================================================
 //< END MAIN BLOCK >=================================================================
