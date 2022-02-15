@@ -55,6 +55,7 @@ $minwidth: 320px;
   margin: 15px 0px 0px 0px;
   min-height: 44px;
   &__body {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +72,7 @@ $minwidth: 320px;
   }
 
   &__burger {
+    display: none;
   }
 
   &__menu {
@@ -92,6 +94,7 @@ $minwidth: 320px;
     font-size: 14px;
     color: $sapphire;
     font-weight: 500;
+    text-transform: capitalize;
   }
   &__line {
     padding: 0px 3px 3px 3px;
@@ -117,14 +120,16 @@ $minwidth: 320px;
 
   &__btn {
     width: 128px;
+    font-size: 14px;
     padding: 13.5px 20px;
     border: 2px solid yellow;
     border-radius: 35px;
-    margin: 0px 60px 0px 0px;
+    margin: 0px 25px 0px 0px;
   }
 
   &__lang {
     position: relative;
+    text-transform: uppercase;
     span {
       position: absolute;
       width: 100%;
@@ -146,57 +151,99 @@ $minwidth: 320px;
   }
   @media (max-width: 796px) {
     &__body {
-      position: absolute;
+      /* position: fixed;
       width: 100%;
       height: 100%;
       top: 0;
-      left: 0px;
+      right: 0;
       background-color: $krayola;
       z-index: 2;
       padding: 54px 0px 0px 0px;
       overflow: auto;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; */
     }
+    /* &__body.active {
+      right: 0;
+    } */
     &__left {
       flex-wrap: nowrap;
       align-items: flex-start;
     }
 
     &__logo {
-      display: none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 20px 0px 0px 15px;
     }
     &__burger {
+      display: block;
       position: absolute;
-      left: 85%;
+      right: 0;
+      top: 0;
       width: 20px;
       height: 14px;
+      margin: 21px 15px 0px 0px;
+      z-index: 3;
       &::before,
       &::after {
         content: "";
+        background-color: yellow;
         position: absolute;
-        width: 18px;
+        width: 100%;
         height: 2px;
         left: 2px;
-        background-color: yellow;
       }
       &::before {
         top: 0px;
       }
       &::after {
-        bottom: 0;
+        bottom: 0px;
+      }
+      &.active:before {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+      &.active:after {
+        bottom: 6px;
+        transform: rotate(45deg);
       }
       span {
         position: absolute;
-        width: 18px;
+        background-color: yellow;
+        width: 100%;
         height: 2px;
         left: 0x;
         top: 6px;
-        background-color: yellow;
+      }
+      &.active span {
+        transform: scale(0);
+      }
+      &.active {
+        position: fixed;
+        margin: 36px 30px 0px 0px;
       }
     }
 
     &__menu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: -100%;
+      right: 0;
+      background-color: $krayola;
+      z-index: 2;
+      padding: 54px 0px 0px 0px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease 0s;
+    }
+    &__menu.active {
+      overflow: auto;
+      top: 0;
+      transition: all 0.3s ease 0s;
     }
 
     &__list {

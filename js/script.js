@@ -1,9 +1,9 @@
 
 /*===< for change classes >=================================================== */
 $(document).ready(function(){
-   $('.icon-menu').click(function(event){
-       $('.icon-menu,.menu__body').toggleClass('active')
-       $('page').toggleClass('lock')
+   $('.header__burger').click(function(event){
+       $('.header__burger,.header__menu').toggleClass('active')
+       $('body').toggleClass('lock')
    });
 });
 
